@@ -71,21 +71,24 @@ void setup()
   pinMode(PIN_MOTOR_R_PWM, OUTPUT);
   pinMode(PIN_MOTOR_L_PWM, OUTPUT);
 
-  beep();
 }
 
 
 // Arduino loop
 void loop()
 {
-  // step right
   delay(1000);  
+  beep();
+  delay(1000);  
+
+  // step right
   setMotor(MOTOR_R, DIR_FORWARD, 255);
   delay(250);
   setMotor(MOTOR_R, DIR_FORWARD, 0);
   
-  // step left
   delay(1000);  
+
+  // step left
   setMotor(MOTOR_L, DIR_FORWARD, 255);
   delay(250);
   setMotor(MOTOR_L, DIR_FORWARD, 0);
