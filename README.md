@@ -11,5 +11,5 @@ Everything under this directory is licensed under [GPLv3][GPL01].
 
 
 [GPL01]: LICENSE
-[WAR01]: tree/master/ZumoWarn
+[WAR01]: https://github.com/rafacouto/pololu-zumo/tree/master/ZumoWarn
 
