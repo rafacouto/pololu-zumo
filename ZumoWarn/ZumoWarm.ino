@@ -60,7 +60,7 @@ const uint8_t PINS[] = {
 void setMotor(Motor motor, Direction dir, uint8_t speed)
 {
   digitalWrite(PINS[motor++], dir);
-  digitalWrite(PINS[motor], speed);
+  analogWrite(PINS[motor], speed);
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -158,7 +158,7 @@ void loop()
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-#define WARMING_SPEED 50
+#define WARMING_SPEED 0x80
 
 void progWarming(uint64_t millis, bool reset)
 {
@@ -203,7 +203,7 @@ void progWarming(uint64_t millis, bool reset)
 //////////////////////////////////////////////////////////////////////
 
 #define FORWARD_SECONDS 2
-#define BACKWARD_SECONDS 4
+#define BACKWARD_SECONDS 2
 
 void progProvoke(uint64_t millis, bool reset)
 {
